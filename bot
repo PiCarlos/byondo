@@ -1,0 +1,11 @@
+import telebot
+
+bot = telebot.TeleBot('1354207868:AAGaKa7X6G24fXBF6_4Z1GfKnGw6NLRExa4')
+
+
+@bot.message_handler(content_types=['text'])
+def lalala(message):
+    bot.send_message(message.chat.id, message.text)
+
+
+bot.polling(none_stop=True)
